@@ -8,8 +8,9 @@
 # Technique: Sliding Window
 # Time Complexity: O(n)
 # Space Complexity: O(1)
-from collections import deque
 def findmaxaverage(arr,k):
+    if not arr or k > len(arr):
+        return none
     window_sum = sum(arr[:k])
     max_sum = window_sum
     for i in range(k,len(arr)):
