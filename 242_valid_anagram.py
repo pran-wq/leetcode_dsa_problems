@@ -1,16 +1,26 @@
-'''Given two strings s and t, 
-return True if t is an anagram of s.'''
+# LeetCode 242 - Valid Anagram
+# https://leetcode.com/problems/valid-anagram/
+#
+# Approach:
+# Count the frequency of characters in string s using Counter.
+# Decrease the frequency while iterating through string t.
+# If all frequencies become zero, the strings are anagrams.
+#
+# Time Complexity: O(n)
+# Space Complexity: O(n)
 
-from collections import Counter
 def are_anagram(s,t):
+    freq={}
     if len(s)!= len(t):
         return False
-    freq = Counter(s)
-    for c in t:
-        freq[c]= freq.get(c,0)-1
-    if freq.values !=0:
-        return False
-    return all(v == 0 for v in freq.values())
+    for char in s:
+        freq[char]=freq.get(char,0)+1
+    for char in t:
+        if char not in freq or freq[char]==0:
+            return 
+        False
+        freq[char]-=1
+    
 print(are_anagram("anagram","nagaram" ))
 
 
