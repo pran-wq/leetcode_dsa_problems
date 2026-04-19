@@ -1,7 +1,14 @@
-# Group all anagrams together!
-
-# words = ["eat","tea","tan","ate","nat","bat"]
-# Output: [["eat","tea","ate"],["tan","nat"],["bat"]]
+# LeetCode 49 - Group Anagrams
+# https://leetcode.com/problems/group-anagrams/
+#
+# Description:
+# Given an array of strings, group the anagrams together.
+# An anagram is a word formed by rearranging the letters of another word.
+#
+# Technique: Hash Map + Sorting
+# Time Complexity: O(n * k log k)
+# n = number of words, k = length of each word
+# Space Complexity: O(n)
 
 def group_anagrams(words):
     group ={}
