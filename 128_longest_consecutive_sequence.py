@@ -1,4 +1,13 @@
-# Given an unsorted array of integers, find the length of the longest consecutive elements sequence
+# LeetCode 128 - Longest Consecutive Sequence
+# https://leetcode.com/problems/longest-consecutive-sequence/
+#
+# Description:
+# Given an unsorted array of integers, return the length
+# of the longest consecutive elements sequence.
+#
+# Technique: Hash Set
+# Time Complexity: O(n)
+# Space Complexity: O(n)
 arr = [105,101,102,103,104,105,107,1,2,3,4]
 def find_sequence(arr):
     num_set = set(arr)
