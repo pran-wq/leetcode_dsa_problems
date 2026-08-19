@@ -26,4 +26,4 @@ def check_parentheses(bracket):
             if stack.pop() != pairs[char]:
                 return False
     return len(stack)==0
-print(check_parentheses("[{()}]"))
+print(check_parentheses("["))
