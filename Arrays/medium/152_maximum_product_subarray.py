@@ -1,3 +1,7 @@
+# usses of kadane's method to tackle the problem and the double itreation been used to remove the odd negative problem
+
+
+
 class Solution(object):
     def maxProduct(self, nums):
         max_product = nums[0]
